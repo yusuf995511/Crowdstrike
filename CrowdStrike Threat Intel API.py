@@ -12,7 +12,7 @@ falcon = APIHarnessV2(client_id="your_client_id_here",
                       client_secret="your_client_secret_here"
                       )
 
-#Path to save the CSV file ( Use // for windows)
+#Path to save the CSV file ( Use // for Windows)
 Path = "Path of your choice"
 
 # Initialize the marker to None
