@@ -38,24 +38,26 @@ Before you begin, ensure you have met the following requirements:
    
 
 # Configuration
-Before running the script, you need to configure your Crowdstrike API credentials. Edit the script file (crowdstrike_automation.py) and locate the following section:
+1. Before running the script, you need to configure your Crowdstrike API credentials. Edit the script file (crowdstrike_automation.py) and locate the following section:
    Create an APIHarnessV2 object to connect to Crowdstrike.
    ```python
    falcon = APIHarnessV2(client_id="your_client_id_here",
                       client_secret="your_client_secret_here"
                       )
    ```
-                     
+   Replace `your_client_id_here` and `your_client_secret_here` with your actual Crowdstrike API credentials.
 
-Replace `your_client_id_here` and `your_client_secret_here` with your actual Crowdstrike API credentials.
-
+ 2. Change the path were you want to save the csv file:
+   ```python
+      #Path to save the CSV file ( Use // for windows)
+      Path = "Path of your choice"
+   ```
 
 # Usage
 To run the script, open a terminal and navigate to the project directory. Then, execute the following command:
    ```python
    python crowdstrike_automation.py
    ```
-
 
 # Options
 The script provides the following options:
