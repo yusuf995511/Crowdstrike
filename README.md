@@ -23,19 +23,16 @@ Before you begin, ensure you have met the following requirements:
    cd Crowdstrike
    ```
    
-
 3. Create a virtual environment (optional but recommended):
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
    ```
-   
 
 4. Run the requiremnt file.
    ```bash
    pip install -r requirements.txt
    ```
-   
 
 # Configuration
 1. Before running the script, you need to configure your Crowdstrike API credentials. Edit the script file (crowdstrike_automation.py) and locate the following section:
@@ -51,6 +48,12 @@ Before you begin, ensure you have met the following requirements:
    ```python
       #Path to save the CSV file ( Use // for windows)
       Path = "Path of your choice"
+   ```
+3. Change the IP and the port if you don't want to send it to the localhost
+   ```python
+   # By default
+      IP = "127.0.0.1"
+      PORT = 5500
    ```
 
 # Usage
