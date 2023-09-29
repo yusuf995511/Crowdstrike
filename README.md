@@ -38,7 +38,7 @@ Before you begin, ensure you have met the following requirements:
 1. Before running the script, you need to configure your Crowdstrike API credentials. Edit the script file (crowdstrike_automation.py) and locate the following section:
    Create an APIHarnessV2 object to connect to Crowdstrike.
    ```python
-   falcon = APIHarnessV2(client_id="your_client_id_here",
+      falcon = APIHarnessV2(client_id="your_client_id_here",
                       client_secret="your_client_secret_here"
                       )
    ```
