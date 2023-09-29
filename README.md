@@ -46,8 +46,8 @@ Before you begin, ensure you have met the following requirements:
 
  2. Change the path were you want to save the csv file:
    ```python
-      #Path to save the CSV file ( Use // for windows)
-      Path = "Path of your choice"
+         #Path to save the CSV file ( Use // for windows)
+         Path = "Path of your choice"
    ```
 3. Change the IP and the port if you don't want to send it to the localhost
    ```python
