@@ -14,36 +14,47 @@ Before you begin, ensure you have met the following requirements:
 ### Installation
 
 1. Clone this repository to your local machine or download the script file.
-
+   ```bash
    git clone https://github.com/yusuf995511/Crowdstrike
+   ```
 
 2. Navigate to the project directory:
-
-   cd Crowdstrike-main
+   ```bash
+   cd Crowdstrike
+   ```
+   
 
 3. Create a virtual environment (optional but recommended):
-
+   ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   ```
+   
 
 4. Run the requiremnt file.
-
+   ```bash
    pip install -r requirements.txt
+   ```
+   
 
 # Configuration
 Before running the script, you need to configure your Crowdstrike API credentials. Edit the script file (crowdstrike_automation.py) and locate the following section:
-
-Create an APIHarnessV2 object to connect to Crowdstrike.
+   ```python
+   Create an APIHarnessV2 object to connect to Crowdstrike.
    falcon = APIHarnessV2(client_id="your_client_id_here",
                       client_secret="your_client_secret_here"
                       )
+   ```
+                     
 
-Replace "your_client_id_here" and "your_client_secret_here" with your actual Crowdstrike API credentials.
+Replace `your_client_id_here` and `your_client_secret_here` with your actual Crowdstrike API credentials.
 
 
 # Usage
 To run the script, open a terminal and navigate to the project directory. Then, execute the following command:
+   ```python
    python crowdstrike_automation.py
+   ```
 
 
 # Options
