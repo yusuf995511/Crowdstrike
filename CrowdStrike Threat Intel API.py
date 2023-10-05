@@ -190,15 +190,15 @@ def prCyan(skk): print("\033[96m{}\033[00m".format(skk))
 
 def welcome_page():
   """Displays a welcome page to the user and prompts them to choose between running continuously or saving the results to a CSV file."""
-  
+  print("")
   prRed("*********************************************************************")
   print("")
   prYellow("   Welcome to the CrowdStrike Threat Intelligence Automation!")
   print("")
   prRed("*********************************************************************")
   prCyan("Please choose one of the following options:")
-  prGreen("1. Fowrwarding logs to a DB ( marker )")
-  prGreen("2. Fowrwarding logs to a DB ( offset to marker )")
+  prGreen("1. Forwarding logs to a DB ( marker )")
+  prGreen("2. Forwarding logs to a DB ( offset to marker )")
   prGreen("3. Run continuously to fetch threat intel ( marker - CSV) ")
   prGreen("4. Run continuously to fetch threat intel ( offset to marker - CSV) ")
   prGreen("5. anything else to exit")

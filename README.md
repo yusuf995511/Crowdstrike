@@ -44,9 +44,9 @@ Before you begin, ensure you have met the following requirements:
    ```
    Replace `your_client_id_here` and `your_client_secret_here` with your actual Crowdstrike API credentials.
 
- 2. Change the path were you want to save the csv file:
+ 2. Change the path where you want to save the CSV file:
    ```python
-         #Path to save the CSV file ( Use // for windows)
+         #Path to save the CSV file ( Use // for Windows)
          Path = "Path of your choice"
    ```
 3. Change the IP and the port if you don't want to send it to the localhost
