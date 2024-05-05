@@ -1,4 +1,3 @@
-from falconpy import *
 from falconpy import APIHarnessV2
 import pandas as pd
 import time
