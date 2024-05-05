@@ -32,6 +32,10 @@ Before you begin, ensure you have met the following requirements:
    ```bash
    pip install -r requirements.txt
    ```
+   OR 
+   ```bash
+   pip3 install -r requirements.txt
+   ```
 
 # Configuration
 1. Before running the script, you need to configure your Crowdstrike API credentials. Edit the script file (crowdstrike_automation.py) and locate the following section:
