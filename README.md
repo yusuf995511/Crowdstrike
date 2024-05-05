@@ -17,7 +17,6 @@ Before you begin, ensure you have met the following requirements:
    ```bash
    git clone https://github.com/yusuf995511/Crowdstrike
    ```
-
 2. Navigate to the project directory:
    ```bash
    cd Crowdstrike
