@@ -1,6 +1,6 @@
-from falconpy import APIHarnessV2
+from falconpy import APIHarnessV2, APIError
 import pandas as pd
-from logging
+import logging
 import time
 import os
 import sys
