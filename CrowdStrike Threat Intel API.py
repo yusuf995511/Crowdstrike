@@ -282,7 +282,7 @@ def main():
             except Exception as e:
                 logger.error(f"Error: {e}")
                 logger.info("Waiting for " + str(Wait) + " seconds before the next check.")
-                time.sleep(Wait)
+                break
 
     elif choice == "2":
         while True:
@@ -328,7 +328,7 @@ def main():
             except Exception as e:
                 logger.error(f"Error: {e}")
                 logger.info("Waiting for " + str(Wait) + " seconds before the next check.")
-                time.sleep(Wait)
+                break
     elif choice == "3":
 
         # Ask the user for the time to run in minutes
@@ -372,6 +372,7 @@ def main():
                     time.sleep(Wait)
             except Exception as e:
                 logger.error(f"Error: {e}")
+                break
 
     elif choice == "4":
         # Ask the user for the time to run in minutes
@@ -441,7 +442,7 @@ def main():
             except Exception as e:
                 logger.error(f"Error: {e}")
                 logger.info("Waiting for " + str(Wait) + " seconds before the next check.")
-                time.sleep(Wait)
+                break
     else:
         logger.info("Invalid choice.")
         sys.exit()
