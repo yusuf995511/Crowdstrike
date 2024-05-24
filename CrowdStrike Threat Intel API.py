@@ -1,5 +1,4 @@
-import logging
-from falconpy import APIHarnessV2, APIError
+from falconpy import APIHarnessV2
 import pandas as pd
 import time
 import os
@@ -18,6 +17,7 @@ falcon = APIHarnessV2(client_id="your_client_id_here",
 
 # Path to save the CSV file ( Use // for Windows)
 Path = "Path of your choice"
+
 
 # Initialize the marker to None
 marker = None
@@ -136,6 +136,33 @@ def gather_threat_intel(marker):
                         'errors': item.get('errors', []) if isinstance(item.get('errors', []), list) else []
                     }
                     threat_intel_list.append(threat_intel_item)
+                if isinstance(item, dict):
+
+                    # Check if the indicator is not already in the set (no duplicates)
+                    new_marker = item.get('_marker', '')
+                    threat_intel_item = {
+                        'id': item.get('id', ''),
+                        'indicator': item.get('indicator', ''),
+                        'type': item.get('type', ''),
+                        'deleted': item.get('deleted', False),
+                        'published_date': item.get('published_date', ''),
+                        'last_updated': item.get('last_updated', ''),
+                        'reports': item.get('reports', []),
+                        'actors': item.get('actors', []),
+                        'malware_families': item.get('malware_families', []),
+                        'kill_chains': item.get('kill_chains', []),
+                        'ip_address_types': item.get('ip_address_types', []),
+                        'domain_types': item.get('domain_types', []),
+                        'malicious_confidence': item.get('malicious_confidence', ''),
+                        '_marker': item.get('_marker', ''),
+                        'labels': item.get('labels', []),
+                        'relations': item.get('relations', []),
+                        'targets': item.get('targets', []),
+                        'threat_types': item.get('threat_types', []),
+                        'vulnerabilities': item.get('vulnerabilities', []),
+                        'errors': item.get('errors', []) if isinstance(item.get('errors', []), list) else []
+                    }
+                    threat_intel_list.append(threat_intel_item)
         return new_marker, threat_intel_list
     except APIError as e:
         logger.error(f"Error gathering threat intelligence: {e}")
@@ -177,6 +204,7 @@ def db_connection(indicators):
             s.connect((IP, PORT))
             r = (json.dumps(x))
             s.sendto(r.encode('utf-8'), (IP, PORT))
+            # print("SENT to:-", IP,":", PORT)
         except Exception as msg:
             logger.error(f"Error sending threat intelligence: {msg}")
         finally:
@@ -217,7 +245,7 @@ def main():
     first_time = 1
     global marker  # Declare marker as a global variable
 
-    # Displays a welcome page
+    #Displays a welcome page
     welcome_page()
 
     # enter choice
